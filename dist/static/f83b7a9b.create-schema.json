@@ -1,0 +1,212 @@
+[
+  {
+    "fields": [
+      {
+        "of": [
+          {
+            "fields": [
+              {
+                "name": "itemid",
+                "type": "number",
+                "title": "Item ID"
+              },
+              {
+                "name": "listitem",
+                "type": "string",
+                "title": "ListItem"
+              },
+              {
+                "name": "itemlink",
+                "type": "string",
+                "title": "Item Link"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "navlist",
+        "type": "array"
+      },
+      {
+        "name": "logo",
+        "type": "image"
+      }
+    ],
+    "name": "headercontent",
+    "type": "document",
+    "title": "Header Content"
+  },
+  {
+    "fields": [
+      {
+        "name": "mainHeading",
+        "type": "string"
+      },
+      {
+        "name": "paragraph",
+        "type": "text"
+      },
+      {
+        "name": "content",
+        "type": "text",
+        "title": "Hero Content"
+      },
+      {
+        "name": "heroimg",
+        "type": "image",
+        "title": "Hero Image"
+      },
+      {
+        "name": "bulbimg",
+        "type": "image",
+        "title": "Buld Image"
+      },
+      {
+        "name": "personimage",
+        "type": "image",
+        "title": "Person Image"
+      },
+      {
+        "name": "buttonHero",
+        "type": "string"
+      },
+      {
+        "of": [
+          {
+            "fields": [
+              {
+                "name": "id",
+                "type": "number",
+                "title": "ID"
+              },
+              {
+                "name": "imgurl",
+                "type": "image",
+                "title": "Img"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "imglist",
+        "type": "array",
+        "title": "Img List"
+      },
+      {
+        "name": "sideimage",
+        "type": "image",
+        "title": "Side Image"
+      },
+      {
+        "name": "newblogimage",
+        "type": "image",
+        "title": "New Blog Image"
+      },
+      {
+        "name": "ownblog",
+        "type": "string",
+        "title": "Own Blog"
+      },
+      {
+        "name": "howto",
+        "type": "string",
+        "title": "How To"
+      },
+      {
+        "name": "clickhere",
+        "type": "string",
+        "title": "Click Here"
+      },
+      {
+        "name": "noteimg",
+        "type": "image",
+        "title": "Note Image"
+      },
+      {
+        "name": "infoimg",
+        "type": "image",
+        "title": "Info Image"
+      },
+      {
+        "name": "infosubheading",
+        "type": "string",
+        "title": "Info Sub Heading"
+      },
+      {
+        "name": "infoheading",
+        "type": "string",
+        "title": "Info Heading"
+      },
+      {
+        "name": "infoparagraph",
+        "type": "text",
+        "title": "Info Paragraph"
+      }
+    ],
+    "name": "homecontent",
+    "type": "document",
+    "title": "Home Content"
+  },
+  {
+    "fields": [
+      {
+        "name": "cardimg",
+        "type": "image",
+        "title": "Car Image"
+      },
+      {
+        "name": "languagename",
+        "type": "string",
+        "title": "Language Name"
+      },
+      {
+        "name": "subHeading",
+        "type": "string"
+      },
+      {
+        "name": "logoimg",
+        "type": "image",
+        "title": "Logo Image"
+      },
+      {
+        "name": "buttonname",
+        "type": "string",
+        "title": "Button Name"
+      },
+      {
+        "name": "languageintro",
+        "type": "text",
+        "title": "Language Intro"
+      },
+      {
+        "name": "languagedetail",
+        "type": "text",
+        "title": "Language Detail"
+      },
+      {
+        "name": "languagedetailtwo",
+        "type": "text",
+        "title": "Language Detail Two"
+      }
+    ],
+    "name": "bloglist",
+    "type": "document",
+    "title": "Blog List"
+  },
+  {
+    "fields": [
+      {
+        "name": "comment",
+        "type": "text"
+      },
+      {
+        "name": "commentid",
+        "type": "string",
+        "title": "Comment ID"
+      }
+    ],
+    "name": "blogcomment",
+    "type": "document",
+    "title": "Blog Comment"
+  }
+]
