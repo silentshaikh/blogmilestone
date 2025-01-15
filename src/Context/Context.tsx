@@ -101,18 +101,26 @@ function Context({children}:{children:ReactNode}) {
     //FOR HANDLING SANITY FORM
     const onHandleComment = async (e:FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        
+        const commentId = new Date().getTime().toString();
         if(commValue.trim() !== ''){
             // alert('Comment Added');
             setCommAlert(false);
             try{
-                const newComment = {
-                    _type:'blogcomment',
-                    comment:commValue,
-                    commentid: new Date().getTime().toString(),
-                }
+                // const newComment = {
+                //     _type:'blogcomment',
+                //     comment:commValue,
+                //     commentid: new Date().getTime().toString(),
+                // }
+
+                  await fetch('/api/addcomments',{
+                    method:"POST",
+                    headers:{'Context-Type':'application.json'},
+                    body:JSON.stringify({commentId,commValue})
+                });
+                // const commResult = await commResponse.json();
+                    alert('Comment Added')
                 setCommValue('');
-                await client.create(newComment);
+                // await client.create(newComment);
             }catch(eror){
                 alert(`Comment hasn't go to sanity ${eror}`);
             }

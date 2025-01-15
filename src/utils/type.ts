@@ -104,4 +104,5 @@ export interface ContextTypes{
     hanAlert:boolean;
     handleCommentAlert: () => void;
     commAlert:boolean;
+    // commResult:{commentId:string,commValue:number};
 }
