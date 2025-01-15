@@ -30,7 +30,8 @@ export const teko = Teko({
 export const headerSanityApi = `*[_type=="headercontent"][0]{
   navlist,
     "logo":logo.asset->url
-}`;
+}
+    `;
 export const homeSanityApi = `
 *[_type=="homecontent"][0]{
   mainHeading,
@@ -73,4 +74,5 @@ export const blogSanityApi = `
 export const commentSanityApi = `*[_type=="blogcomment"]{
   comment,
     commentid
-}`;
+}
+    `;
