@@ -120,7 +120,9 @@ function Context({children}:{children:ReactNode}) {
                 // const commResult = await commResponse.json();
                     alert('Comment Added')
                 setCommValue('');
-                window.location.reload();
+                setTimeout(() => {
+                    window.location.reload();
+                },2000)
                 // await client.create(newComment);
             }catch(eror){
                 alert(`Comment hasn't go to sanity ${eror}`);
@@ -141,8 +143,8 @@ function Context({children}:{children:ReactNode}) {
         switch (action.type) {
             case HEADER:
                 return {...state,headerSan:(action.payload as HeaderSanity)};
-            case HOME:
-                return {...state,homeSan:(action.payload as HomeSanity)}; 
+                case HOME:
+                    return {...state,homeSan:(action.payload as HomeSanity)}; 
             case BLOG_LIST:
                 return {...state,blogSan:(action.payload as SanityBlog[]),backUpList:(action.payload as SanityBlog[])}; 
             case COMMENTS:
@@ -151,27 +153,28 @@ function Context({children}:{children:ReactNode}) {
                   // If the input value is empty or null, return the full list of products
         if (!(action.payload as string).trim()) {
             return { ...state, blogSan: state.backUpList}; // Use a backup of the full product list
-          }
-          const filtMenInput = state.backUpList.filter((e) => {
+        }
+        const filtMenInput = state.backUpList.filter((e) => {
             return e.languagename
-              .toLowerCase()
-              .split(/\s+/)
+            .toLowerCase()
+            .split(/\s+/)
               .join("")
               .includes((action.payload as string).toLowerCase().split(/\s+/).join(""));
           });
           return { ...state, blogSan: filtMenInput };               
-        
+          
             default:
                 return state
-        }
-    };
-
-    //PERFORM FUNCTION TO FETCH SANITY DATA
-    async function fetchSanityContent(query: string) {
-        const contentSanity = await client.fetch(query);
-        console.log(contentSanity);
+            }
+        };
+        
+        //PERFORM FUNCTION TO FETCH SANITY DATA
+        async function fetchSanityContent(query: string) {
+            const contentSanity = await client.fetch(query);
+            console.log(contentSanity);
         return contentSanity;
-      }
+    }
+   
 
     //SANITY USEEFFECT
     useEffect(() => {
