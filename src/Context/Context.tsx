@@ -120,6 +120,7 @@ function Context({children}:{children:ReactNode}) {
                 // const commResult = await commResponse.json();
                     alert('Comment Added')
                 setCommValue('');
+                window.location.reload();
                 // await client.create(newComment);
             }catch(eror){
                 alert(`Comment hasn't go to sanity ${eror}`);
